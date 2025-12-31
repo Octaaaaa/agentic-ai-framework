@@ -53,25 +53,24 @@ The framework follows a layered architecture:
 - Python 3.10, 3.11, or 3.12
 - Ollama (for local LLM support, optional)
 
-### Quick Start
+### Installation Methods
+
+**Method 1: Quick start (development)**
 ```bash
-# Clone the repository
-git clone https://github.com/Octaaaaa/agentic-ai-framework.git
+git clone `https://github.com/Octaaaaa/agentic-ai-framework.git`
 cd agentic-ai-framework
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Copy environment template
 cp .env.example .env
-
-# Run tests to verify installation
-python -m pytest tests/
-
-# Run a simple example
-python examples/simple_agent.py
 ```
 
+**Method 2: Install as package**
+```bash
+git clone `https://github.com/Octaaaaa/agentic-ai-framework.git`
+cd agentic-ai-framework
+pip install -e .
+pip install -r requirements-dev.txt
+cp .env.example .env
+```
 ## Usage
 
 ### Creating a Custom Agent
@@ -386,18 +385,13 @@ See `docs/workflow-patterns.md` for patterns and best practices.
 ```bash
 # Install dependencies
 pip install -r requirements.txt
-
-# Install test dependencies
-pip install pytest pytest-asyncio pytest-cov
+pip install -r requirements-dev.txt
 
 # Run all tests
 python -m pytest tests/
 
 # Run with coverage
 python -m pytest tests/ --cov=src
-
-# Run specific test file
-python -m pytest tests/test_workflow.py -v
 ```
 
 ## Documentation
