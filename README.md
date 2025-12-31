@@ -50,7 +50,7 @@ The framework follows a layered architecture:
 
 ### Prerequisites
 
-- Python 3.10 or higher
+- Python 3.10, 3.11, or 3.12
 - Ollama (for local LLM support, optional)
 
 ### Quick Start
@@ -384,6 +384,12 @@ See `docs/workflow-patterns.md` for patterns and best practices.
 
 ## Testing
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Install test dependencies
+pip install pytest pytest-asyncio pytest-cov
+
 # Run all tests
 python -m pytest tests/
 

@@ -248,7 +248,7 @@ class TestAgentWorkflow:
         workflow = AgentWorkflow()
         
         async def simple_node(state: AgentState) -> dict:
-            return {}
+            return {"current_agent": "simple"}
         
         workflow.add_node("simple", simple_node)
         workflow.set_entry_point("simple")
